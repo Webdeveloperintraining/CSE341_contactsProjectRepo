@@ -1,0 +1,32 @@
+//localhost
+#Get All contacts
+GET http://localhost:3001/contacts
+
+#Get a single contact
+//GET http://localhost:3001/contacts/65a38a1d36424efe02dc2003
+
+
+// Create contact
+POST http://localhost:3001/contacts HTTP/1.1
+
+Content-Type: application/json
+{
+"favoriteColor":"Purple",
+"firstName":"John",
+"lastName":"Johnson",
+"birthday":"2010-11-03"
+};
+
+// PUT contact
+# PUT http://localhost:3001/contacts/65a38a1d36424efe02dc2003 HTTP/1.1
+# Content-Type: application/json
+
+# {
+# "favoriteColor":"Black",
+# "firstName":"Stuart",
+# "lastName":"Little",
+# "birthday":"2001-07-03"
+# }
+
+//DELETE contact
+//DELETE http://localhost:3001/contacts/65ab0ebb6e3160c1c32c7251 HTTP/1.1
