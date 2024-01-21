@@ -41,7 +41,7 @@ const createContact = async (req,res)=>{
 
 const updateContact = async (req,res)=>{
     //#swagger.tags["Contacts"];
-    const contactId =new ObjectId(req.params);
+    const contactId =new ObjectId(req.params.id);
     const contact = {
     favoriteColor:req.body.favoriteColor,
     firstName:req.body.firstName,
@@ -58,7 +58,7 @@ const updateContact = async (req,res)=>{
 
 const deleteContact = async (req, res) => {
     //#swagger.tags["Contacts"];
-    const contactId = new ObjectId(req.params.contactId);
+    const contactId = new ObjectId(req.params.id);
     const response = await mongodb.getDatabase().db().collection('contacts').deleteOne({ _id: contactId });
 
     if (response.modifiedCount > 0) {
