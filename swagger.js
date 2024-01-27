@@ -6,7 +6,7 @@ const doc=
         title:"Contacts Api",
         description:"Contacts Api"
     },
-    host: 'https://contacts-project-3i6u.onrender.com',
+    host: 'contacts-project-3i6u.onrender.com',
     //host: 'localhost:3002',
     schemes:['http','https']
 };
